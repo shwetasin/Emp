@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>EmpData</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="editForm" (ngSubmit)="onEdit(editForm.value)">
+    <ion-item lines="full">
+      <ion-label position="floating"><b> firstName :</b></ion-label>
+      <ion-input placeholder="Name" type="text" required formControlName="firstName" class="form-control"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"><b> lastName :</b></ion-label>
+      <ion-input placeholder="Name" type="text" required formControlName="lastName" class="form-control"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"><b>Phone:</b></ion-label>
+      <ion-input placeholder="number" type="text" required formControlName="phone" class="form-control"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"><b>Email:</b></ion-label>
+      <ion-input placeholder="Address" type="email" required formControlName="email" class="form-control"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="edit" color="danger" expand="block">Edit Data</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

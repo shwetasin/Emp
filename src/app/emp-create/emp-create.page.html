@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <b>Register</b>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <form [formGroup]="officeForm" (ngSubmit)="onSubmit(officeForm.value)">
+    <ion-item lines="full">
+      <ion-label position="floating"><b> EmpolyeeName :</b></ion-label>
+      <ion-input placeholder="Name" type="text" required formControlName="Empolyeename"
+        class="form-control"></ion-input>
+    </ion-item >
+    <ion-item lines="full">
+      <ion-label position="floating"><b> Age:</b></ion-label>
+      <ion-input placeholder="Age" type="text" required formControlName="Age" class="form-control"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"><b>Address:</b></ion-label>
+      <ion-input placeholder="Address" type="text" required formControlName="Address" class="form-control"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"><b>Email:</b></ion-label>
+      <ion-input placeholder="Address" type="email" required formControlName="email" class="form-control"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"><b>Password:</b></ion-label>
+      <ion-input placeholder="Address" type="password" required formControlName="Password" class="form-control"></ion-input>
+    </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button  (click)="GotoEmployeeList()" type="submit" color="danger" expand="block">Sign Up</ion-button>
+        </ion-col>
+      </ion-row>
+  </form>
+</ion-content>
